@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>POMODORO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #container{
+                border:1px solid  #333;
+                border-radius :20px;
+                width:500px;
+                margin:200px auto;
+                padding:20px;
+                text-align:center;
+                background : #454545;
+            }
+            #timer{
+                color:#f00; /*red color for text*/
+                font-size:50px; 
+                margin:10px auto;
+                border : 5px solid red;
+                border-radius:50%; /*for circle shape*/
+                width:200px; /*height and width of circle*/
+                height:200px;
+                
+               
+            }
+            #time{
+                margin-top:70px;
+                z-index : 1;
+                position:relative;
+            }
+              
+            #buttons button { 
+                background:#4da6ff;
+                border:none; 
+                color:#fff; 
+                cursor:pointer; 
+                padding:10px; 
+                width:100px; 
+                margin:10px auto;
+                font-size:14px;
+                height : 50px;
+                border-radius : 50px;
+            }
+            #buttons button#start{
+                background : #0c0;
+            }
+            #buttons button#pause{
+                background : #080;
+            }
+            #buttons button#stop{
+                background : #f00;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="pomodoro">
+  <div id="container">
+    <div id="timer">
+      <div id="time">
+        <span id="minutes">20</span>
+        <span id="colon">:</span>
+        <span id="seconds">00</span>
+      </div>
+      
+    </div>
+
+    <div id="buttons">
+      <button id="set">SET</button>
+      <button id="start">START</button>
+      <button id="pause">PAUSE</button>
+      <button id="stop">STOP</button>
+    </div>
+  </div>
+</div>
+    </body>
+</html>
