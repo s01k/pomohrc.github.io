@@ -102,3 +102,8 @@ input:hover,
     margin: 20px 0 30px 0;
   }
 }
+
+::placeholder {
+  color: springgreen;
+  opacity: 1;
+}
