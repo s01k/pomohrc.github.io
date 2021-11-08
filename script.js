@@ -1,6 +1,7 @@
 var timer;
 
-var x = document.getElementById("myAudio"); // get audio files by id from html
+var b1 = document.getElementById("aud1"); // get audio files by id from html
+var b2 = document.getElementById("aud2"); // get audio files by id from html
 
 $(document).ready(function(){
 var working = false;
@@ -49,6 +50,9 @@ function startTimer() {
     if (workTime < 0) {
       clearInterval(timer);
       timer = breakTimer();
+
+      b2.play(); //audio for notifying end of focus time
+
     } else {
       showTime(workTime);
     }
@@ -59,7 +63,7 @@ function startTimer() {
   //What Happens when #start is pressed
  function start() {     
 
-  x.play(); //Plays the audio
+  b1.play(); //Plays the start audio
 
    if (working == true){ 
       return
@@ -74,9 +78,6 @@ function startTimer() {
   
   //What Happens when #pause/resume is pressed
   function pause() {
-
-    x.pause(); //Pauses audio
-
     clearInterval(timer);
     $('.resume').unbind().click(resume);
     $('#pause').html('Resume');
@@ -88,9 +89,6 @@ function startTimer() {
 
   //What happens when the "Resume" is pressed
   function resume(){  
-
-    x.play(); //Serves as a dual fuction for resuming the audio
-  
     $('#pause').unbind().click(pause);
     $('#pause').html('Pause');
     $('#pause').addClass('pause');
@@ -99,9 +97,6 @@ function startTimer() {
     }
   //What happens when #reset is pressed
   function reset() {
-
-    x.pause(); //Serves as a dual fuction for stopping the audio
-
    clearInterval(timer);
     working = false;
     workTime = 0;
@@ -121,6 +116,9 @@ function startTimer() {
       clearInterval(timer);
       working = false;
       start();
+
+      b1.play(); //audio for notifying end of break time
+
     } else {
       showTime(breakTime);
     }

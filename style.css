@@ -28,7 +28,7 @@ input{
   font-size: 17px;
   line-height: 20px;
   text-decoration: none; 
-  background-color: rgba(47, 79, 79, 0.580);
+  background-color: rgba(47, 79, 79, 0.947);
   color: springgreen;
 }
 .btn {
@@ -42,11 +42,11 @@ input{
   font-size: 17px;
   line-height: 20px;
   text-decoration: none; 
-  background-color: rgba(47, 79, 79, 0.580);
+  background-color: rgba(47, 79, 79, 0.947);
   color: springgreen;
 }
 
-.btn {
+input,.btn {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -81,7 +81,7 @@ input:hover,
 .container {
   position: relative;
   border-radius: 5px;
-  background-color: rgba(47, 79, 79, 0.580);
+  background-color: rgba(47, 79, 79, 0.947);
   padding: 60px 60px 60px 60px;
   margin: 60px 60px 60px 60px;
   text-align: center;
