@@ -31,7 +31,7 @@ function checkStatus() {
         sec = '0' + sec
       }
       var timeString = min+':'+sec
-      $('#msg').text("Focus for    "+timeString+" minutes.")
+      $('#msg').text("Let's focus for    "+timeString+" minutes.")
 
       if(time == breakTime) //Change timer message, if it is break time
       {
