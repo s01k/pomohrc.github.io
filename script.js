@@ -62,14 +62,18 @@ function startTimer() {
 
   //What Happens when #start is pressed
  function start() {     
-
-  b1.play(); //Plays the start audio
-
    if (working == true){ 
       return
    } //Else
+
   workTime = $('#work').val()*60;
     breakTime = $('#break').val()*60;
+
+    if(workTime || breakTime > 0) //avoid focus audio when working
+    {
+      b1.play(); //Plays the start audio
+    }
+
    working = true;
    checkStatus();    
     timer = startTimer(); 
